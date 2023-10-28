@@ -56,7 +56,6 @@ def read_embeddings(embeddings_file):
 
 def get_emb_matrix(vocab, emb):
     '''Get embedding matrix given vocab and the embeddings'''
-    # Get an embedding matrix based on vocabulary and embeddings
     num_tokens = len(vocab) + 2
     word_index = dict(zip(vocab, range(len(vocab))))
     embedding_dim = len(emb["the"])
