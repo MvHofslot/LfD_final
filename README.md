@@ -12,7 +12,7 @@ While most previous results achieved by researchers were around 70%, we aimed to
 
 ## Research Questions
 
-Based on the knowledge that large pre-trained language models have cross-lingual capabilities and that monolingual models can be transferred to low-resource languages effectively, we aimed to explore the relationship between different languages and their performance in offensive language detection. We compared the results of monolingual and multilingual models trained on 10%, 50%, and 100% of the training data.
+Based on the knowledge that large pre-trained language models have cross-lingual capabilities and that monolingual models can be transferred to low-resource languages effectively, we aimed to explore the relationship between different languages and their performance of corresponding monolingual models in offensive language detection. We compared the results of monolingual and multilingual models trained on 10%, 50%, and 100% of the training data.
 
 ## Data Download
 
