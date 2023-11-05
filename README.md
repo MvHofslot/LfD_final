@@ -37,7 +37,12 @@ To get started with this project, follow these steps:
    pip install tensorflow
    pip install transformers
 
-3. Run the provided scripts to train and evaluate the models.
+3. For the LSTM model, you will need to download pretrained embeddings from GloVe or FastText. You can download these embeddings from the following links:
+
+- [Glove pretrained embeddings](https://nlp.stanford.edu/projects/glove/)
+- [fastText pretrained embeddings](https://fasttext.cc/docs/en/english-vectors.html)
+
+4. Run the provided scripts to train and evaluate the models.
 
 ## Team Contributions
 
