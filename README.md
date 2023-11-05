@@ -18,9 +18,9 @@ Based on the knowledge that large pre-trained language models have cross-lingual
 
 You can download the data used in this project from the following links, click on the links to download the files:
 
-- [train.tsv](train.tsv)
-- [dev.tsv](dev.tsv)
-- [test.tsv](test.tsv)
+- [train.tsv](data/train.tsv)
+- [dev.tsv](data/dev.tsv)
+- [test.tsv](data/test.tsv)
 
 ## Getting Started
 
@@ -43,6 +43,8 @@ To get started with this project, follow these steps:
 - [fastText pretrained embeddings](https://fasttext.cc/docs/en/english-vectors.html)
 
 4. Run the provided scripts to train and evaluate the models.
+
+Additionally, 'preprocess.py' is used to remove all the '@USER' in the text and 'randomSelect.py' is used to randomly select 10% and 50% of the data in the training text for experiments. They are placed in the 'data preprocessing' folder.
 
 ## Team Contributions
 
