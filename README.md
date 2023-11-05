@@ -1,4 +1,4 @@
-# Offensive Language Detection Project
+# Offensive Language Detection
 
 ## Overview
 
