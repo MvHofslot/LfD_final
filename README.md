@@ -46,6 +46,8 @@ To get started with this project, follow these steps:
 
 Additionally, 'preprocess.py' is used to remove all the '@USER' in the text and 'randomSelect.py' is used to randomly select 10% and 50% of the data in the training text for experiments. They are placed in the 'data preprocessing' folder.
 
+Running LM.py with the argument -l <language> allows you to choose which language model to use (for example, "python LM.py -l it" runs the Italian model).
+
 ## Team Contributions
 
 - **Matthijs:** Primarily responsible for the 'classic models' aspect.
