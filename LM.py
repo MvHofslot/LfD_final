@@ -26,6 +26,8 @@ def create_arg_parser():
                         help="Separate dev set to read in (default dev.tsv)")
     parser.add_argument("-t", "--test_file", type=str, default='test.tsv',
                         help="If added, use trained model to predict on test set (default test.tsv)")
+    parser.add_argument("-l", "--language", type=str, default='en',
+                        help="Choose which language model to use. Options: en, multi, nl, zh (chinese), ja, ko, ge, it, es (spanish), sv (swedish)")
     args = parser.parse_args()
     return args
 
@@ -94,9 +96,22 @@ def main():
     X_train, Y_train = read_corpus(args.train_file)
     X_dev, Y_dev = read_corpus(args.dev_file)
 
+
+    # choose model
+    model_dict = {"en": "microsoft/deberta-v3-base",
+                  "multi": "bert-base-multilingual-uncased",
+                  "nl": "bert-base-dutch-cased",
+                  "zh": "bert-base-chinese",
+                  "ja": "cl-tohoku/bert-base-japanese-v3",
+                  "ko": "kykim/bert-kor-base",
+                  "ge": "bert-base-german-cased",
+                  "it": "dbmdz/bert-base-italian-cased",
+                  "es": "dccuchile/bert-base-spanish-wwm-uncased",
+                  "sv": "KB/bert-base-swedish-cased"}
+
     # Tokenization and data preparation code blocks here
     # Tokenize and prepare input data
-    lm = "bert-base-uncased"  # You can change the language model here
+    lm = model_dict[args.language]
     tokenizer = AutoTokenizer.from_pretrained(lm)
 
     # Tokenize the training data
@@ -126,7 +141,6 @@ def main():
         Y_test_bin = to_categorical(Y_test_bin)
         # Make predictions
         test_set_predict(model, tokens_test, Y_test_bin, "test")
-
 
 if __name__ == '__main__':
     main()
