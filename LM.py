@@ -52,7 +52,7 @@ def train_model(model, X_train, Y_train, X_dev, Y_dev):
     loss_function = BinaryCrossentropy(from_logits=True)
     optimizer = Adam(learning_rate=5e-5)
     verbose = 1
-    batch_size = 8
+    batch_size = 64
     epochs = 3
     # Early stopping: stop training if there are three consecutive epochs without improvement
     callback = tf.keras.callbacks.EarlyStopping(monitor='val_loss', patience=3)
